@@ -7,9 +7,9 @@ const Dashboard = () => {
   const [filtered, setFiltered] = useState([]);
   const [countries, setCountries] = useState([]);
   const [worldData, setWorldData] = useState({
-    cases: 0,
-    deaths: 0,
-    recovered: 0,
+    cases: "",
+    deaths: "",
+    recovered: "",
   });
 
   useEffect(() => {
@@ -43,15 +43,21 @@ const Dashboard = () => {
       spinner
       text="Loading Corona information...">
       <div className="full-height ">
-        <div className="row alert alert-danger font-weight-bold">
-          <div className="col-4">
-            Total Cases - {worldData.cases.toLocaleString()}
+        <div className="row ml-3 mr-3 font-weight-bold">
+          <div className="col-4 p-2  ">
+            <div className="alert alert-warning text-center">
+              TOTAL CASES - {worldData.cases.toLocaleString()}
+            </div>
           </div>
-          <div className="col-4">
-            Total Deaths - {worldData.deaths.toLocaleString()}
+          <div className="col-4 p-2 ">
+            <div className="alert alert-danger text-center">
+              TOTAL DEATHS - {worldData.deaths.toLocaleString()}
+            </div>
           </div>
-          <div className="col-4">
-            Total Recovered - {worldData.recovered.toLocaleString()}
+          <div className="col-4 p-2 ">
+            <div className="alert alert-success text-center">
+              TOTAL RECOVERED - {worldData.recovered.toLocaleString()}
+            </div>
           </div>
         </div>
 

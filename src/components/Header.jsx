@@ -19,9 +19,9 @@ const Header = () => {
       <div className="collapse navbar-collapse" id="navbarText">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <NavLink className="nav-link" to="/dashboard">
+            {/* <NavLink className="nav-link" to="/dashboard">
               Dashboard
-            </NavLink>
+            </NavLink> */}
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/register"></NavLink>

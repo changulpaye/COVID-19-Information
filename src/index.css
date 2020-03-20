@@ -28,6 +28,7 @@ code {
 
 .new-cases {
   background-color: lightyellow;
+  font-weight: bold;
 }
 
 .large-font {

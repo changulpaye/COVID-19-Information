@@ -10,9 +10,12 @@ const CountryTable = ({ country: countries }) => {
       </span>
     );
   };
-  const newCasesTemplate = (rowData, column) => (
-    <div className="new-cases"> +{rowData.todayCases.toLocaleString()} </div>
-  );
+  const newCasesTemplate = (rowData, column) =>
+    rowData.todayCases !== 0 ? (
+      <div className="new-cases"> +{rowData.todayCases.toLocaleString()} </div>
+    ) : (
+      <span></span>
+    );
   const deathTemplate = (rowData, column) => (
     <div className="death-cases">+{rowData[column.field].toLocaleString()}</div>
   );
@@ -23,16 +26,19 @@ const CountryTable = ({ country: countries }) => {
   return (
     <div>
       <DataTable
+        className="table table-striped"
+        responsive={true}
+        selectionMode="single"
         value={countries}
         sortMode="multiple"
+        resizableColumns={true}
+        columnResizeMode="fit"
         paginator={true}
-        rows={20}
-        // rowsPerPageOptions={[5, 10, 20]}>
-      >
+        rows={10}>
         <Column
           field="country"
           body={countryTemplate}
-          header="Country"
+          header="Countries"
           className="font-weight-bold"
           sortable="true"
         />
@@ -75,7 +81,7 @@ const CountryTable = ({ country: countries }) => {
         <Column
           field="casesPerOneMillion"
           body={valueTemplate}
-          header="Cases 1M"
+          header="Tot Cases/1M"
           sortable="true"
         />
       </DataTable>
