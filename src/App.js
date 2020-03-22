@@ -10,9 +10,9 @@ function App() {
       <Header />
       <div>
         <Switch>
-          <Route path="/corona-infomation" component={Dashboard} />
+          <Route path="/covid19" component={Dashboard} />
           <Route path="/details/:countryname" component={CountryDetails} />
-          <Redirect to="/corona-infomation" from="/" />
+          <Redirect to="/covid19" from="/" />
         </Switch>
       </div>
     </div>

@@ -28,6 +28,9 @@ const Header = () => {
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
+          <span className="design-name">
+            Design & Developed by - Parmeshwar Changulpaye
+          </span>
           {/* <AutoComplete
             value={country}
             field="country"

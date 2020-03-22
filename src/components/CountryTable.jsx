@@ -12,12 +12,17 @@ const CountryTable = ({ country: countries }) => {
   };
   const newCasesTemplate = (rowData, column) =>
     rowData.todayCases !== 0 ? (
-      <div className="new-cases"> +{rowData.todayCases.toLocaleString()} </div>
+      <span className="new-cases">
+        {" "}
+        +{rowData.todayCases.toLocaleString()}{" "}
+      </span>
     ) : (
       <span></span>
     );
   const deathTemplate = (rowData, column) => (
-    <div className="death-cases">+{rowData[column.field].toLocaleString()}</div>
+    <span className="death-cases">
+      +{rowData[column.field].toLocaleString()}
+    </span>
   );
 
   const countryTemplate = (rowData, column) => (
@@ -26,13 +31,10 @@ const CountryTable = ({ country: countries }) => {
   return (
     <div>
       <DataTable
-        className="table table-striped"
         responsive={true}
-        selectionMode="single"
+        // selectionMode="single"
         value={countries}
         sortMode="multiple"
-        resizableColumns={true}
-        columnResizeMode="fit"
         paginator={true}
         rows={10}>
         <Column

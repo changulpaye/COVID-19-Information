@@ -46,17 +46,17 @@ const Dashboard = () => {
         <div className="row ml-3 mr-3 font-weight-bold">
           <div className="col-4 p-2  ">
             <div className="alert alert-warning text-center">
-              TOTAL CASES - {worldData.cases.toLocaleString()}
+              TOTAL CASES {worldData.cases.toLocaleString()}
             </div>
           </div>
           <div className="col-4 p-2 ">
             <div className="alert alert-danger text-center">
-              TOTAL DEATHS - {worldData.deaths.toLocaleString()}
+              TOTAL DEATHS {worldData.deaths.toLocaleString()}
             </div>
           </div>
           <div className="col-4 p-2 ">
             <div className="alert alert-success text-center">
-              TOTAL RECOVERED - {worldData.recovered.toLocaleString()}
+              TOTAL CURED {worldData.recovered.toLocaleString()}
             </div>
           </div>
         </div>
