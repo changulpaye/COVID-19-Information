@@ -41,7 +41,7 @@ const CountryTable = ({ country: countries }) => {
         <Column
           field="country"
           body={countryTemplate}
-          header="Countries"
+          header="Country"
           className="font-weight-bold"
           sortable="true"
         />
