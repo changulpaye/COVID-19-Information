@@ -26,7 +26,8 @@ const CountryTable = ({ country: countries }) => {
   );
 
   const countryTemplate = (rowData, column) => (
-    <Link to={`details/${rowData[column.field]}`}>{rowData[column.field]}</Link>
+    // <Link to={`details/${rowData[column.field]}`}>{rowData[column.field]}</Link>
+    <Link to="covid19">{rowData[column.field]}</Link>
   );
   return (
     <div>

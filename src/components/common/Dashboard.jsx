@@ -41,7 +41,7 @@ const Dashboard = () => {
     <LoadingOverlay
       active={!countries.length}
       spinner
-      text="Loading Corona information...">
+      text="Loading information...">
       <div className="full-height ">
         <div className="row ml-3 mr-3 font-weight-bold">
           <div className="col-4 p-2  ">
