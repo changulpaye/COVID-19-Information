@@ -36,8 +36,9 @@ const CountryTable = ({ country: countries }) => {
         // selectionMode="single"
         value={countries}
         sortMode="multiple"
-        paginator={true}
-        rows={10}>
+        // paginator={true}
+        // rows={10}
+      >
         <Column
           field="country"
           body={countryTemplate}

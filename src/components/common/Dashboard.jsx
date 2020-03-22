@@ -69,7 +69,7 @@ const Dashboard = () => {
                   className="form-control"
                   type="text"
                   name="search"
-                  placeholder="Enter country name"
+                  placeholder="Search"
                   id="search"
                   onChange={e => handleSearch(e.target.value)}
                 />
