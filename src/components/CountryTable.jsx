@@ -12,16 +12,13 @@ const CountryTable = ({ country: countries }) => {
   };
   const newCasesTemplate = (rowData, column) =>
     rowData.todayCases !== 0 ? (
-      <span className="new-cases">
-        {" "}
-        +{rowData.todayCases.toLocaleString()}{" "}
-      </span>
+      <span className="new-cases">+{rowData.todayCases.toLocaleString()}</span>
     ) : (
       <span></span>
     );
   const deathTemplate = (rowData, column) => (
     <span className="death-cases">
-      +{rowData[column.field].toLocaleString()}
+      {rowData[column.field].toLocaleString()}
     </span>
   );
 

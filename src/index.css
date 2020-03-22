@@ -62,8 +62,24 @@ code {
   font-style: italic;
 }
 
-body .p-datatable .p-datatable-tbody > tr:nth-child(even) {
-  background-color: #e6e6e6;
+@media only screen and (max-width: 40em) {
+  body .p-datatable .p-datatable-tbody > tr:nth-child(even) {
+    background-color: #c0e9f5;
+    /* border: 1px solid lightgray; */
+    /* box-shadow: 5px 10px 8px 10px #888888; */
+    border-radius: 4px;
+  }
+
+  body .p-datatable .p-datatable-tbody > tr:nth-child(odd) {
+    background-color: #f1eeee;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+  }
+
+  .p-datatable table {
+    border-collapse: initial;
+    border-spacing: 10px;
+  }
 }
 
 .p-datatable-responsive
